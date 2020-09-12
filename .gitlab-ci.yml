@@ -7,7 +7,7 @@ pages:
     - npm i
     - npm run build
     - cd build
-    - mv build public
+    - mv . public
   artifacts:
     paths:
       - public

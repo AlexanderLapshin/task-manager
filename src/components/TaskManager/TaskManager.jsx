@@ -1,13 +1,14 @@
 import React from "react";
 import TaskInput from "./TaskInput/TaskInput";
 import TaskList from "./TaskList/TaskList";
+import "./TaskManager.css"
 
-const TaskManager = ({ tasks, addTask }) => {
+const TaskManager = ({ tasks, addTask, deleteTask }) => {
   return (
-    <div>
+    <div className="task-list-container">
       <TaskInput addTask={addTask} />
       <h3>Your tasks</h3>
-      <TaskList tasks={tasks}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask}/>
     </div>
   );
 };

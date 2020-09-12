@@ -1,0 +1,25 @@
+.dashboard-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.dashboard-container__title {
+  text-align: center;
+}
+
+.table-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.table-container__table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-container__table, td {
+  border: 3px solid black;
+  padding: 5px;
+}

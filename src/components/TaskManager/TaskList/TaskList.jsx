@@ -1,12 +1,22 @@
-import React from 'react'
+import React from "react";
+import "./TaskList.css";
 
-const TaskList = ({tasks}) => {
-  console.log(tasks);
+const TaskList = ({ tasks, deleteTask }) => {
   return (
-<ul>
-  {tasks.map((task, index) => { return <li>{task}</li>})}
-</ul>
-  )
-}
+    <div>
+      {tasks.map((task, index) => {
+        return (
+          <div key={index} className="task">
+            <label>
+              <input className="task__checkbox" type="checkbox" />
+              {task}
+            </label>
+            <button onClick={() => deleteTask(task)} className="task__button task__button_delete">x</button>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-export default TaskList
+export default TaskList;

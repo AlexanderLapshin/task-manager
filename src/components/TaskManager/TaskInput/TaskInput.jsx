@@ -1,23 +1,29 @@
 import React, { useState } from "react";
+import "./TaskInput.css";
 
-
-const TaskInput = ({addTask}) => {
+const TaskInput = ({ addTask }) => {
   const [task, setTask] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setTask(e.target.value);
-  }
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    addTask(task)
-  }
+    addTask(task);
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label style={{fontWeight: "bold", display: "block"}}>Add new task</label>
-      <input name="task" type="text" value={task} onChange={handleChange} placeholder="Task name"></input>
-      <button type="submit">Add</button>
+    <form className="task-form" onSubmit={handleSubmit}>
+      <input
+        className="task-form__input"
+        name="task"
+        type="text"
+        value={task}
+        onChange={handleChange}
+        placeholder="Task name"
+      ></input>
+      <button className="task-form__btn" type="submit">Add</button>
     </form>
   );
 };

@@ -1,0 +1,21 @@
+.header-container {
+  background: rgb(93, 117, 252);
+  padding: 0 20px;
+}
+
+.navbar {
+ display: flex;
+ align-items: center;
+}
+
+.navbar__item {
+  color: #fff;
+  height: 100%;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.navbar__item:hover {
+  color: rgb(253, 156, 91)
+}

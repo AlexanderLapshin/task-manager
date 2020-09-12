@@ -4,15 +4,15 @@ import MainLayout from "./components/MainLayout/MainLayout";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route path="/" component={MainLayout} />
-        </Switch>
-      </Router>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <Switch>
+                    <Route path="/" component={MainLayout} />
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;

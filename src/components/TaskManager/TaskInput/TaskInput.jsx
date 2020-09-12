@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+
+import { addTask } from "../../../redux/actions/taskActions";
+
 import "./TaskInput.css";
 
 const TaskInput = ({ addTask }) => {
   const [task, setTask] = useState("");
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setTask(e.target.value);
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     addTask(task);
+    setTask("");
   };
 
   return (
@@ -23,9 +29,14 @@ const TaskInput = ({ addTask }) => {
         onChange={handleChange}
         placeholder="Task name"
       ></input>
-      <button className="task-form__btn" type="submit">Add</button>
+      <button className="task-form__btn" type="submit">
+        Add
+      </button>
     </form>
   );
 };
 
-export default TaskInput;
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({ addTask }, dispatch);
+
+export default connect(null, mapDispatchToProps)(TaskInput);

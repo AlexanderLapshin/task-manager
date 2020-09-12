@@ -1,36 +1,35 @@
 .task-form__input {
-  -webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
-	outline: none;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	width: 80%;
-	background: #fff;
-	margin-bottom: 4%;
-	border: 1px solid #2980b9;
-	padding: 2%;
-	color: #555;
-	font: 95% Arial, Helvetica, sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 80%;
+  background: #fff;
+  border: 1px solid #2980b9;
+  padding: 2%;
+  color: #555;
+  font: 95% Arial, Helvetica, sans-serif;
 }
 
 .task-form__btn {
-  position: relative;
-  vertical-align: top;
   width: 20%;
-  padding: 11px 0;
-  font-size: 19px;
+  padding: 2%;
   color: white;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   background: #2980b9;
-  border: 0;
+  border: 1px solid #2980b9;
   cursor: pointer;
+  font: 95% Arial, Helvetica, sans-serif;
+  outline:none;
 }
 .task-form__btn:active {
   top: 1px;
+  background:  #3e86b6;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
